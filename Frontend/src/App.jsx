@@ -1,21 +1,18 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import CreateAd from './pages/CreateAd';
-import Marketplace from './pages/Marketplace';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import CreateNFT from './pages/CreateNFT';
+import Marketplace from './pages/Marketplace';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<CreateAd />} />
-          <Route path="/marketplace" element={<Marketplace />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateNFT />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+      </Routes>
     </Router>
   );
 }
